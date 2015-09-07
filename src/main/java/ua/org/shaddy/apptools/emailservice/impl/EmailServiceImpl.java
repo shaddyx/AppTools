@@ -1,4 +1,4 @@
-package ua.org.shaddy.apptools.emailservice;
+package ua.org.shaddy.apptools.emailservice.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
@@ -18,9 +18,13 @@ import javax.mail.internet.MimeMultipart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ua.org.shaddy.apptools.emailservice.Constants;
+import ua.org.shaddy.apptools.emailservice.EmailMessage;
+import ua.org.shaddy.apptools.emailservice.EmailService;
+import ua.org.shaddy.apptools.emailservice.EmailServiceConfig;
+import ua.org.shaddy.apptools.emailservice.MailServiceException;
 import ua.org.shaddy.microtools.StringTools;
 import ua.org.shaddy.microtools.ThreadTools;
-import ua.org.shaddy.microtools.TimerTools;
 
 public class EmailServiceImpl implements EmailService, Runnable{
     private static final String HTML_TYPE = "text/html";
